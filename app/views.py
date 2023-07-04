@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from . models import Book
 
-# Create your views here.
 
 def purple(request):
     return render(request,"web/purple.html")
