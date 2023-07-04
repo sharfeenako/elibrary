@@ -15,12 +15,6 @@ def forms(request):
 def icons(request):
     return render(request,"web/pages/icons/mdi.html")
 
-def register(request):
-    return render(request,"web/pages/samples/register.html")
-
-def login(request):
-    return render(request,"web/pages/samples/login.html")
-
 def tables(request):
     return render(request,"web/pages/tables/basic-table.html")
 

@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tinymce',
-    
+    'crispy_forms',
+    "crispy_bootstrap5",
     'import_export',
     'versatileimagefield',
 
@@ -118,6 +119,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
@@ -141,6 +145,16 @@ STATIC_FILE_ROOT = BASE_DIR / 'static'
 STATICFILES_DIRS = ((BASE_DIR / 'static'),)
 STATIC_ROOT = BASE_DIR/'assets'
 
+
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_AUTO_LOGIN = True
+SEND_ACTIVATION_EMAIL = False
+REGISTRATION_EMAIL_SUBJECT_PREFIX = ''
+
+REGISTRATION_OPEN = True
+LOGIN_URL = '/app/accounts/login/'
+LOGOUT_URL = '/app/accounts/logout/'
+LOGIN_REDIRECT_URL = '/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
